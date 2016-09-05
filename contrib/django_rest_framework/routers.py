@@ -11,7 +11,7 @@ class CustomGenericRouter(SimpleRouter):
             url=r'^{prefix}{trailing_slash}$',
             mapping={
                 'get': 'list',
-                'post': 'list'
+                # 'post': 'list'
             },
             name='{basename}-list',
             initkwargs={'suffix': 'List'}
@@ -28,10 +28,10 @@ class CustomGenericRouter(SimpleRouter):
         Route(
             url=r'^{prefix}/{lookup}{trailing_slash}$',
             mapping={
-                'get': 'retrieve',
-                'put': 'update',
+                # 'get': 'retrieve',
+                # 'put': 'update',
                 # 'patch': 'partial_update',
-                'delete': 'destroy'
+                # 'delete': 'destroy'
             },
             name='{basename}-detail',
             initkwargs={'suffix': 'Instance'}
