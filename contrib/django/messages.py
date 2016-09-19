@@ -46,10 +46,15 @@ errors_list = {
         'verification_pending': 'Aún no ha verificado su correo electrónico.',
         'verification_error': 'El correo no existe en el sistema o ya fue'
                               ' verificado anteriormente.',
+        'email_inc_exists': 'El correo electrónico está en un formato'
+                            ' invalido o ya existe en el sistema',
+        'no_user_exists': 'El usuario no existe en el sistema.',
         'not_in_team': 'Usted no pertenece a este negocio.',
         'no_team': 'El negocio no existe en el sistema.',
+        'team_exists': 'El negocio ya existe en el sistema.',
         'already_claimed': 'Esta invitación ya fue procesada anteriormente.',
         'already_in_team': 'El usuario ya se encuentra en este negocio.',
+        'invalid_data': 'La información es incorrecta.',
     }
 }
 
@@ -74,3 +79,19 @@ def generate_msg(request, state=GRAY, title='Debug', body='Empty'):
         message=body,
         fail_silently=True
     )
+
+
+def _parseToJSON(message):
+    return {
+        'level': message.level_tag,
+        'tags': message.extra_tags,
+        'body': message.message,
+    }
+
+
+def getMessagesJSON(request):
+    storage = messages.get_messages(request)
+    array = list()
+    for message in storage:
+        array.append(_parseToJSON(message))
+    return array

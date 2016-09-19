@@ -18,6 +18,10 @@ from django_sendgrid_parse.emails import TransactionalEmail
 
 
 class PasswordResetForm(PRF):
+    def __init__(self, *args, **kwargs):
+        super(PasswordResetForm, self).__init__(*args, **kwargs)
+        self.fields['email'].widget.attrs['placeholder'] = "Correo Electrónico"
+
     def send_mail(self, subject_template_name, email_template_id,
                   context, from_email, to_email, html_email_template_name=None):
         """
