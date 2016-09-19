@@ -2,7 +2,8 @@
 import os
 import zipfile
 import json
-from dictzip_exceptions import StructureIsNotAListError, InvalidElementInStructure, KeyInDictElementIsNotAString
+from dictzip_exceptions import StructureIsNotAListError, \
+    InvalidElementInStructure, KeyInDictElementIsNotAString
 
 __author__ = 'parias'
 
