@@ -1,4 +1,4 @@
-// Explore https://github.com/glebm/gulp-webpack-react-bootstrap-sass-template/blob/master/webpack.config.litcoffee
+// Explore https://goo.gl/qoLZP3
 // to get a better understanding of the following code
 
 var path = require('path');
