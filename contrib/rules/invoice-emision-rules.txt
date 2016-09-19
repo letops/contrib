@@ -1,0 +1,87 @@
+CFDI:Comprobante
+Requerido:
+    version
+    fecha
+    tipoDeComprobante
+    formaDePago
+    subTotal
+    total
+    metodoDePago
+    LugarExpedicion
+Opcional:
+    condicionesDePago
+    descuento
+    TipoCambio
+    Moneda
+    NumCtaPago
+    FolioFiscalOrig
+    SerieFolioFiscalOrig
+    FechaFolioFiscalOrig
+    MontoFolioFiscalOrig
+
+CFDI:Emisor & CFDI:Receptor
+Requerido:
+    rfc
+Opcional:
+    nombre
+
+CFDI:Concepto:
+Requerido:
+    cantidad
+    unidad
+    descripcion
+    valorUnitario
+    importe
+Opcional:
+    noIdentificacion
+
+
+CFDI:Impuestos:
+Opcional:
+    totalImpuestosRetenidos
+    totalImpuestosTrasladados
+
+CFDI:Retencion:
+Requerido:
+    impuesto
+    importe
+
+CFDI:Traslado:
+Requerido:
+    impuesto
+    tasa
+    importe
+
+CFDI:RegimenFiscal
+Requerido:
+    regimen
+
+# Domicilio Emisor
+CFDI:DomicilioFiscal
+Requerido:
+    calle
+    municipio
+    estado
+    pais
+    codigoPostal
+Opcional:
+    noExterior
+    noInterior
+    colonia
+    localidad
+    referencia
+
+# Domicilio Receptor
+CFDI:Domicilio
+Requerido:
+    pais
+Opcional
+    calle
+    noExterior
+    noInterior
+    colonia
+    localidad
+    referencia
+    municipio
+    estado
+    codigoPostal
