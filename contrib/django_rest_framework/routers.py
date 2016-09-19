@@ -1,4 +1,5 @@
-from rest_framework.routers import Route, DynamicDetailRoute, SimpleRouter, DynamicListRoute
+from rest_framework.routers import Route, DynamicDetailRoute, SimpleRouter, \
+    DynamicListRoute
 
 
 class CustomGenericRouter(SimpleRouter):
