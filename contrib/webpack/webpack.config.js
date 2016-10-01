@@ -50,8 +50,10 @@ var styleModLoaders = styleModLoaders.map(function (e) {
 });
 
 var scriptModLoaders = [
-  { test: /\.js$/, exclude: /node_modules/, loader: 'babel' },
-  { test: /\.jsx$/, exclude: /node_modules/, loader: 'babel', query: { presets: ['react'], } },
+  { test: /\.js$/, exclude: /node_modules/, loader: 'babel',
+    query: { presets: ['es2016', 'es2015'], }, },
+  { test: /\.jsx$/, exclude: /node_modules/, loader: 'babel',
+    query: { presets: ['react', 'es2016', 'es2015'], }, },
 ];
 
 var extractPlugin = new ExtractTextPlugin('[name].css', allChunks = true);
