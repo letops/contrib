@@ -8,7 +8,7 @@ base_dir_name=GRVTY
 project_name=GRVTY
 user_name=grvty_user
 group_name=grvty_group
-giturl=git@github.com:letops/"$project_name".git
+giturl=git@github.com:grvty-labs/"$project_name".git
 first_deployment=false
 DANGER=false
 
@@ -45,7 +45,7 @@ function install_lxml_dependencies {
 
 function install_nodejs_dependencies {
   if [ "$first_deployment" = true ] && [ $nodejs_bool = true ]; then
-    curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+    curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
     sudo apt-get install -y nodejs
     sudo npm install -g bower
   fi
@@ -218,7 +218,7 @@ function usage
     echo -e "\t\tAdd a string right after the flag. This string represents the
                 name of the project. This string will be used inside
                 configuration files and must be the same as in your GitHub,
-                e.g. GRVTY in the url [https://github.com/letops/GRVTY.git].\n"
+                e.g. GRVTY in the url [https://github.com/grvty-labs/GRVTY.git].\n"
 
   echo -e "\t -u string | --user-name string"
   echo -e "\t -g string | --group-name"
