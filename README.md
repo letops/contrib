@@ -6,11 +6,11 @@ Minor implementations required for almost all my Django projects. Examples and f
 Owned and developed by
 --------
 
+Daniel Ortiz. Project Manager at:
+
+
 [![StackShare][stack-shield]][stack-tech]
 
-Daniel Ortiz
-
-and
 
 [![GRVTY][logo]](http://grvty.digital)
 
